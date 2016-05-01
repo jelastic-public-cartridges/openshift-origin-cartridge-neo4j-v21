@@ -50,7 +50,7 @@ Scaling:
 Endpoints:
   - Private-IP-Name:   DB_HOST
     Private-Port-Name: DB_PORT
-    Private-Port:      7473
+    Private-Port:      1337
   - Private-IP-Name:   DB_HOST_WEB
     Private-Port-Name: DB_PORT_WEB
     Private-Port:      8080  
