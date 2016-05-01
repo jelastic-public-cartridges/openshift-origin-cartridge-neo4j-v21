@@ -1,0 +1,5 @@
+#!/bin/bash -eu
+
+source /etc/jelastic/environment
+
+[ -d $CARTRIDGE_HOME/logs ] && { rm -rf $CARTRIDGE_HOME/logs; ln -s $CARTRIDGE_HOME/versions/${Version}/neo4j-${Version}/data/log $CARTRIDGE_HOME/logs; chown jelastic:jelastic $CARTRIDGE_HOME/logs;  }
