@@ -9,13 +9,13 @@ for dir in logs tmp pid cache dbs env; do
 done
 
 JAVA_COMMON_PATH="/usr/java"
-JAVA7_DIR=`ls $JAVA_COMMON_PATH | grep jdk1.7 | head -n 1`
+JAVA8_DIR=`ls $JAVA_COMMON_PATH | grep jdk1.8 | head -n 1`
 JAVA_LATEST_DIR="/usr/java/latest"
 JAVA_DEFAULT_DIR="/usr/java/default"
 
 [ -L $JAVA_LATEST_DIR ] && rm $JAVA_LATEST_DIR;
-[ ! -z $JAVA7_DIR ] && ln -s $JAVA7_DIR $JAVA_LATEST_DIR;
+[ ! -z $JAVA8_DIR ] && ln -s $JAVA8_DIR $JAVA_LATEST_DIR;
 [ -L $JAVA_DEFAULT_DIR ] && rm $JAVA_DEFAULT_DIR;
-[ ! -z $JAVA7_DIR ] && ln -s $JAVA_LATEST_DIR $JAVA_DEFAULT_DIR;
+[ ! -z $JAVA8_DIR ] && ln -s $JAVA_LATEST_DIR $JAVA_DEFAULT_DIR;
 
 echo $(pwd)/versions/${Version}/neo4j-${Version}/bin > env/OPENSHIFT_RUBY_PATH_ELEMENT
