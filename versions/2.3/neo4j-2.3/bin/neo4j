@@ -74,7 +74,7 @@ source bin/utils
 parseConfig
 
 . ${OPENSHIFT_NEO4J_DIR}/versions/${Version}/neo4j-${Version}/bin/variablesparser.sh;
-JAVA_OPTS="-server -Djava.net.preferIPv4Stack=true -XX:+DisableExplicitGC ${wrapper_java_additional} $JAVA_OPTS"
+JAVA_OPTS="-server -Djava.net.preferIPv4Stack=false -XX:+DisableExplicitGC ${wrapper_java_additional} $JAVA_OPTS"
 
 echo ${JAVA_OPTS}
 
