@@ -53,7 +53,7 @@ Endpoints:
     Private-Port:      1337
   - Private-IP-Name:   DB_HOST_WEB
     Private-Port-Name: DB_PORT_WEB
-    Private-Port:      8080  
+    Private-Port:      80 
     Public-Port-Name:  DB_PROXY_PORT
 Publishes:
   publish-db-connection-info:

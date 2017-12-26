@@ -8,6 +8,11 @@ for dir in logs tmp pid cache dbs env; do
 	mkdir -p $dir
 done
 
+/sbin/iptables -t nat -D PREROUTING -p tcp -m tcp --dport 443 -j REDIRECT --to-ports 8743
+/sbin/iptables -t nat -D PREROUTING -p tcp -m tcp --dport 80 -j REDIRECT --to-ports 8080
+
+service iptables save
+
 JAVA_COMMON_PATH="/usr/java"
 JAVA8_DIR=`ls $JAVA_COMMON_PATH | grep jdk1.8 | head -n 1`
 JAVA_LATEST_DIR="/usr/java/latest"
