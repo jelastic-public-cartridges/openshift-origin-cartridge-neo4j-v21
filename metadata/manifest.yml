@@ -55,6 +55,10 @@ Endpoints:
     Private-Port-Name: DB_PORT_WEB
     Private-Port:      80 
     Public-Port-Name:  DB_PROXY_PORT
+  - Private-IP-Name:   EXIM_IP
+    Private-Port-Name: EXIM_PORT
+    Private-Port:      7979
+    Public-Port-Name:  EXIM_PROXY_PORT
 Publishes:
   publish-db-connection-info:
     Type: "ENV:NET_TCP:db:connection-info"
